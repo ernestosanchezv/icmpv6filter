@@ -47,6 +47,7 @@ access-list ipv6 sec
 120 deny icmpv6 any any icmp-type 3 log
 130 deny 44 any any log
 140 deny 0 any any log
+150 permit icmpv6 any any
 exit
 interface 1/1/2-1/1/5
 apply access-list ipv6 sec in
