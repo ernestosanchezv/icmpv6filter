@@ -43,11 +43,12 @@ no shutdown
 exit
 access-list ipv6 sec
 100 permit icmpv6 2001:db8:20::/64 2001:db8:20::/64 icmp-type echo
-110 permit ipv6 2001:db8:20::/64 2001:db8:d1::/64
-120 deny icmpv6 any any icmp-type 3 log
-130 deny 44 any any log
-140 deny 0 any any log
-150 permit icmpv6 any any
+110 permit icmpv6 2001:db8:20::/64 2001:db8:20::/64 icmp-type echo-reply
+120 permit ipv6 2001:db8:20::/64 2001:db8:d1::/64
+130 deny icmpv6 any any icmp-type 3 log
+140 deny 44 any any log
+150 deny 0 any any log
+160 permit icmpv6 any any
 exit
 interface 1/1/2-1/1/5
 apply access-list ipv6 sec in
