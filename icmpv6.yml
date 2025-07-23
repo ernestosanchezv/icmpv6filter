@@ -45,12 +45,12 @@ topology:
     PC2:
       kind: linux
       image: ghcr.io/hellt/network-multitool
-      #binds:
-       #- config/client.sh:/root/client.sh
-      #exec:
+      binds:
+       - config/python_scapy.sh:/root/python_scapy.sh
+      exec:
       #- ip -6 route del default dev eth0
-      #- chmod +x /root/client.sh
-      #- bash /root/client.sh
+       - chmod +x /root/python_scapy.sh
+       - bash /root/python_scapy.sh
       
     PC3:
       kind: linux
