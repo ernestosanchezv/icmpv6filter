@@ -39,21 +39,19 @@ topology:
     PC1:
       kind: linux
       image: docker.io/esanchezv/kaliipv6:latest
-      binds:
-        - legless/sniffer.py:/sniffer.py
       #exec:
        #- ip -6 route del default dev eth0
       
     PC2:
       kind: linux
       image: ghcr.io/hellt/network-multitool
-      #binds:
-       #- config/python_scapy.sh:/root/python_scapy.sh
-       #- legless/sniffer.py:/root/sniffer.py
-      #exec:
+      binds:
+        - config/python_scapy.sh:/root/python_scapy.sh
+        - legless/sniffer.py:/root/sniffer.py
+      exec:
       #- ip -6 route del default dev eth0
-       #- chmod +x /root/python_scapy.sh
-       #- bash /root/python_scapy.sh
+        - chmod +x /root/python_scapy.sh
+        - bash /root/python_scapy.sh
       
     PC3:
       kind: linux
