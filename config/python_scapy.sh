@@ -4,5 +4,5 @@ pip install scapy
 sleep 1
 pip install pyyaml
 sleep 1
-apk add --no-cache supervisor
+apk add --no-cache nano
 sleep 1
